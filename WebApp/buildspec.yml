@@ -10,5 +10,5 @@ phases:
             - dotnet publish -c release -o ./build_output WebApp.csproj
 artifacts:
     files:
-        - CodeBuild-WebAppp/build_output/**/*
+        - ./build_output/**/*
         - scripts/**/*
