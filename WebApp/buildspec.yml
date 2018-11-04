@@ -1,10 +1,14 @@
 version: 0.2
-
 phases:
-  build:
-    commands:
-      - dotnet restore
-      - dotnet build
+    pre_build:
+        commands:
+            - echo Restore started on `date`
+            - dotnet restore WebApp.csproj
+    build:
+        commands:
+            - echo Build started on `date`
+            - dotnet publish -c release -o ./build_output WebApp.csproj
 artifacts:
-  files:
-    - bin/Debug/netcoreapp2.1/*
+    files:
+        - CodeBuild-WebAppp/build_output/**/*
+        - scripts/**/*
