@@ -10,5 +10,5 @@ phases:
       - dotnet publish -o /codebuild/output/publish
 artifacts:
   files:
-  - /codebuild/output/publish/**/*
-  - scripts/**/*
+    - /codebuild/output/publish/**/*
+    - scripts/**/*
