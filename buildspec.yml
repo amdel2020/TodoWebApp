@@ -1,14 +1,14 @@
 version: 0.2
 phases:
-pre_build:
-commands:
-- echo Restore started on `date`
-- dotnet restore WebApp.csproj
-build:
-commands:
-- echo Build started on `date`
-- dotnet publish -c release -o ./build_output WebApp.csproj
+  pre_build:
+    commands:
+      - echo Restore started on `date`
+      - dotnet restore WebApp.csproj
+  build:
+    commands:
+      - echo Build started on `date`
+      - dotnet publish -c release -o ./build_output WebApp.csproj
 artifacts:
-files:
-- CodeBuild-WebAppp/build_output/**/*
-- scripts/**/*
+  files:
+  - TodoWebApp/build_output/**/*
+  - scripts/**/*
